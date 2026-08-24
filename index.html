@@ -3,360 +3,477 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jeff Prestes | Payments, Digital Assets & Technology Advisory</title>
-  <meta name="description" content="Jeff Prestes is a senior payments and digital-assets professional with 25+ years across strategy, advisory and hands-on technology delivery in fintech, banking and Web3.">
+  <title>Jeff Prestes | Future Technology, Payments and Digital Assets</title>
+  <meta name="description" content="Jeff Prestes advises leaders on payments, digital assets, banking technology, Web3 and AI agents. 25+ years across PayPal, EY, Santander Group and executive technology education.">
   <meta name="author" content="Jeff Prestes">
   <link rel="canonical" href="https://jeffprestes.info/">
-  <meta property="og:title" content="Jeff Prestes | Payments, Digital Assets & Technology Advisory">
-  <meta property="og:description" content="Senior payments, banking and Web3 advisor. 25+ years across PayPal, Santander Group, EY, Mercado Bitcoin and AI-agent education.">
+  <meta property="og:title" content="Jeff Prestes | Future Technology, Payments and Digital Assets">
+  <meta property="og:description" content="Strategic technology advisor for leaders building the next decade of payments, digital assets and AI-enabled organizations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jeffprestes.info/">
-  <meta property="og:image" content="https://jeffprestes.info/jeff-prestes-profile-photo.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://jeffprestes.info/jeff-prestes-authority-portrait.jpg">
   <style>
     :root {
-      --bg: #f5f2eb;
-      --surface: #fffaf1;
-      --surface-strong: #ffffff;
-      --ink: #182017;
-      --muted: #596455;
-      --line: rgba(24, 32, 23, 0.13);
-      --accent: #1d6f4f;
-      --accent-2: #c9832b;
-      --accent-soft: #e7f1ea;
-      --shadow: 0 24px 80px rgba(24, 32, 23, 0.12);
+      --black: #090909;
+      --ink: #141414;
+      --dim: #5c5c5c;
+      --line: rgba(20, 20, 20, 0.14);
+      --paper: #f4f3ef;
+      --paper-strong: #fbfaf6;
+      --white: #ffffff;
+      --accent: #7a7a74;
+      --measure: 68ch;
       color-scheme: light;
     }
 
     * { box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-width: 320px;
       color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(29,111,79,0.18), transparent 34rem),
-        radial-gradient(circle at top right, rgba(201,131,43,0.16), transparent 30rem),
-        var(--bg);
-      line-height: 1.65;
+      background: var(--paper);
+      font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+      line-height: 1.72;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
     }
 
+    img { max-width: 100%; display: block; }
     a { color: inherit; }
 
     .page {
-      width: min(1120px, calc(100% - 32px));
+      width: min(1440px, calc(100% - 44px));
       margin: 0 auto;
     }
 
-    header {
-      padding: 28px 0 12px;
-    }
-
-    nav {
+    .nav {
+      min-height: 72px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 24px;
-      font-size: 0.94rem;
-      color: var(--muted);
+      justify-content: space-between;
+      gap: 28px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.74rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
     }
 
     .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--ink);
       text-decoration: none;
-    }
-
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: var(--ink);
-      color: var(--surface);
-      font-size: 0.8rem;
-      letter-spacing: -0.08em;
+      color: var(--black);
+      white-space: nowrap;
+      letter-spacing: 0.2em;
     }
 
     .nav-links {
       display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--dim);
     }
 
     .nav-links a {
       text-decoration: none;
+      padding: 4px 0;
       border-bottom: 1px solid transparent;
     }
 
-    .nav-links a:hover { border-color: currentColor; }
+    .nav-links a:hover { border-color: var(--black); color: var(--black); }
 
     .hero {
-      min-height: 74vh;
+      min-height: calc(100dvh - 72px);
       display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+      gap: clamp(36px, 6vw, 92px);
+      align-items: stretch;
+      padding: clamp(38px, 6vw, 74px) 0 clamp(44px, 6vw, 84px);
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       gap: 48px;
-      align-items: center;
-      padding: 58px 0 72px;
+      padding-top: 6px;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      width: fit-content;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(29, 111, 79, 0.1);
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.82rem;
+    .kicker {
+      margin: 0;
+      color: var(--dim);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      word-spacing: 0.18em;
     }
 
-    h1, h2, h3 { line-height: 1.08; margin: 0; letter-spacing: -0.055em; }
+    h1, h2, h3, p { margin-top: 0; }
 
     h1 {
-      font-size: clamp(3rem, 7vw, 6.6rem);
-      margin-top: 22px;
-      max-width: 9ch;
+      margin-bottom: 0;
+      max-width: 8.4ch;
+      color: var(--black);
+      font-size: clamp(4.4rem, 10vw, 10.8rem);
+      line-height: 0.86;
+      letter-spacing: -0.085em;
+      font-weight: 800;
     }
 
-    .subtitle {
-      font-size: clamp(1.22rem, 2.4vw, 2rem);
-      line-height: 1.25;
-      max-width: 820px;
-      margin: 24px 0 0;
-      color: #263425;
+    .hero-statement {
+      max-width: 17.5ch;
+      margin: 0;
+      color: var(--black);
+      font-size: clamp(1.9rem, 4vw, 4.65rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
       font-weight: 700;
-      letter-spacing: -0.035em;
     }
 
-    .summary {
-      max-width: 770px;
-      margin: 24px 0 0;
-      font-size: 1.08rem;
-      color: var(--muted);
+    .hero-statement span { color: var(--accent); }
+
+    .hero-summary {
+      max-width: 43ch;
+      margin: 28px 0 0;
+      color: var(--dim);
+      font-size: clamp(1rem, 1.35vw, 1.22rem);
+      line-height: 1.9;
+      letter-spacing: 0.015em;
+      word-spacing: 0.18em;
     }
 
-    .actions {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 32px;
+      margin-top: 34px;
     }
 
     .button {
+      min-height: 48px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 46px;
       padding: 0 18px;
+      border: 1px solid var(--black);
       border-radius: 999px;
       text-decoration: none;
+      font-size: 0.76rem;
       font-weight: 800;
-      border: 1px solid var(--ink);
-      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+      white-space: nowrap;
     }
 
-    .button.primary {
-      background: var(--ink);
-      color: var(--surface);
-      box-shadow: 0 14px 34px rgba(24, 32, 23, 0.2);
-    }
-
-    .button.secondary { background: rgba(255, 255, 255, 0.55); }
+    .button.primary { background: var(--black); color: var(--white); }
+    .button.secondary { background: transparent; color: var(--black); }
     .button:hover { transform: translateY(-2px); }
+    .button:active { transform: translateY(0); }
 
-    .hero-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,250,241,0.92));
+    .portrait-panel {
+      position: relative;
+      min-height: 680px;
+      overflow: hidden;
+      background: #d8d8d4;
       border: 1px solid var(--line);
-      border-radius: 32px;
-      padding: 18px;
-      box-shadow: var(--shadow);
     }
 
-    .portrait {
+    .portrait-panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(244,243,239,0.05), rgba(9,9,9,0.12)),
+        linear-gradient(180deg, transparent 58%, rgba(9,9,9,0.14));
+      mix-blend-mode: multiply;
+    }
+
+    .portrait-panel img {
       width: 100%;
-      border-radius: 24px;
-      display: block;
-      aspect-ratio: 4 / 5;
+      height: 100%;
+      min-height: inherit;
       object-fit: cover;
-      filter: saturate(0.96) contrast(1.03);
+      object-position: 58% 42%;
+      filter: grayscale(1) contrast(1.07);
     }
 
-    .fact-card {
-      margin-top: 16px;
-      padding: 18px;
-      border-radius: 22px;
-      background: var(--ink);
-      color: var(--surface);
-    }
-
-    .fact-card strong {
-      display: block;
-      font-size: 2rem;
-      line-height: 1;
-      margin-bottom: 8px;
-      letter-spacing: -0.05em;
-    }
-
-    section { padding: 62px 0; }
-
-    .section-heading {
+    .hero-meta {
       display: grid;
-      grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr);
-      gap: 32px;
-      align-items: end;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .hero-meta div {
+      min-height: 120px;
+      padding: 18px;
+      background: rgba(251, 250, 246, 0.74);
+    }
+
+    .hero-meta strong {
+      display: block;
+      color: var(--black);
+      font-size: clamp(1.4rem, 2vw, 2.1rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 12px;
+    }
+
+    .hero-meta span {
+      display: block;
+      color: var(--dim);
+      font-size: 0.72rem;
+      line-height: 1.5;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: clamp(82px, 11vw, 150px) 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
       margin-bottom: 28px;
+      color: var(--dim);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
     }
 
     h2 {
-      font-size: clamp(2rem, 4vw, 3.6rem);
+      max-width: 11ch;
+      color: var(--black);
+      font-size: clamp(3.1rem, 7vw, 7.4rem);
+      line-height: 0.9;
+      letter-spacing: -0.08em;
+      font-weight: 800;
     }
 
-    .section-heading p {
-      color: var(--muted);
+    .section-intro {
+      max-width: var(--measure);
+      margin: 28px 0 0;
+      color: var(--dim);
+      font-size: clamp(1.08rem, 1.6vw, 1.36rem);
+      line-height: 2.02;
+      letter-spacing: 0.018em;
+      word-spacing: 0.22em;
+    }
+
+    .authority-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: clamp(28px, 5vw, 72px);
+      align-items: start;
+    }
+
+    .capability-list {
+      display: grid;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .capability {
+      display: grid;
+      grid-template-columns: 0.52fr 1fr;
+      gap: 28px;
+      padding: clamp(24px, 4vw, 48px);
+      background: var(--paper-strong);
+    }
+
+    .capability h3 {
+      margin-bottom: 0;
+      color: var(--black);
+      font-size: clamp(1.35rem, 2vw, 2.2rem);
+      line-height: 1;
+      letter-spacing: -0.055em;
+    }
+
+    .capability p {
+      margin-bottom: 0;
+      color: var(--dim);
       font-size: 1.02rem;
-      margin: 0;
+      line-height: 1.9;
+      letter-spacing: 0.012em;
+      word-spacing: 0.15em;
     }
 
-    .grid {
+    .quote-block {
+      position: sticky;
+      top: 32px;
+      padding: clamp(28px, 4vw, 48px);
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .quote-block p {
+      margin-bottom: 0;
+      font-size: clamp(1.55rem, 2.4vw, 2.55rem);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 700;
+    }
+
+    .experience-list {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background: rgba(255, 250, 241, 0.84);
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 24px;
-      box-shadow: 0 16px 50px rgba(24, 32, 23, 0.07);
-    }
-
-    .card h3 {
-      font-size: 1.15rem;
-      letter-spacing: -0.03em;
-      margin-bottom: 10px;
-    }
-
-    .card p, .card li { color: var(--muted); margin: 0; }
-
-    .card ul, .timeline ul {
-      margin: 12px 0 0;
-      padding-left: 18px;
-    }
-
-    .competencies {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-
-    .competency {
-      padding: 18px;
-      border-radius: 22px;
-      background: var(--surface-strong);
-      border: 1px solid var(--line);
-    }
-
-    .competency strong { display: block; margin-bottom: 8px; }
-    .competency span { display: block; color: var(--muted); font-size: 0.92rem; }
-
-    .timeline {
-      display: grid;
-      gap: 14px;
+      gap: clamp(36px, 5vw, 72px);
+      margin-top: 58px;
     }
 
     .role {
       display: grid;
-      grid-template-columns: 230px minmax(0, 1fr);
-      gap: 24px;
-      background: rgba(255, 255, 255, 0.64);
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 22px;
+      grid-template-columns: minmax(180px, 0.28fr) minmax(0, 0.72fr);
+      gap: clamp(24px, 5vw, 70px);
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
     }
 
     .role time {
       display: block;
-      color: var(--accent);
+      color: var(--dim);
+      font-size: 0.74rem;
       font-weight: 800;
-      font-size: 0.9rem;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
     }
 
-    .role h3 { font-size: 1.25rem; margin-bottom: 8px; }
-    .role .company { color: var(--muted); font-weight: 700; margin-bottom: 10px; }
-
-    .highlight {
-      background: var(--ink);
-      color: var(--surface);
-      border-radius: 34px;
-      padding: 34px;
-      display: grid;
-      grid-template-columns: minmax(0, 0.62fr) minmax(0, 0.38fr);
-      gap: 28px;
-      align-items: center;
+    .role h3 {
+      margin-bottom: 18px;
+      color: var(--black);
+      font-size: clamp(1.8rem, 3.2vw, 3.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
     }
 
-    .highlight p { color: rgba(255, 250, 241, 0.78); margin: 14px 0 0; }
+    .role p {
+      max-width: var(--measure);
+      margin-bottom: 0;
+      color: var(--dim);
+      font-size: 1.04rem;
+      line-height: 1.95;
+      letter-spacing: 0.012em;
+      word-spacing: 0.16em;
+    }
 
-    .contact-list {
+    .signal-grid {
       display: grid;
-      gap: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1px;
+      margin-top: 58px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .signal {
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(24px, 4vw, 44px);
+      background: var(--paper-strong);
+    }
+
+    .signal strong {
+      display: block;
+      color: var(--black);
+      font-size: clamp(2.2rem, 5vw, 5.4rem);
+      line-height: 0.86;
+      letter-spacing: -0.08em;
       font-weight: 800;
     }
 
-    .contact-list a {
-      color: var(--surface);
+    .signal span {
+      display: block;
+      max-width: 22ch;
+      color: var(--dim);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: minmax(0, 0.64fr) minmax(300px, 0.36fr);
+      gap: clamp(34px, 6vw, 92px);
+      align-items: end;
+    }
+
+    .contact h2 { max-width: 10ch; }
+
+    .contact-links {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-links a {
+      display: block;
+      padding: 18px 0;
+      color: var(--black);
       text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.28);
-      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(1rem, 1.35vw, 1.2rem);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      word-spacing: 0.12em;
     }
 
     footer {
-      padding: 36px 0 56px;
-      color: var(--muted);
-      font-size: 0.95rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 34px 0 52px;
+      border-top: 1px solid var(--line);
+      color: var(--dim);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
     }
 
-    @media (max-width: 900px) {
-      .hero, .section-heading, .highlight { grid-template-columns: 1fr; }
-      .hero { padding-top: 36px; }
-      .grid, .competencies { grid-template-columns: 1fr 1fr; }
-      .role { grid-template-columns: 1fr; }
-      nav { align-items: flex-start; flex-direction: column; }
-      .nav-links { justify-content: flex-start; }
+    @media (prefers-reduced-motion: no-preference) {
+      .button, .nav-links a { transition-duration: 180ms; }
     }
 
-    @media (max-width: 620px) {
-      .page { width: min(100% - 22px, 1120px); }
-      .grid, .competencies { grid-template-columns: 1fr; }
-      .hero-card, .card, .role, .highlight { border-radius: 22px; }
-      h1 { font-size: clamp(2.65rem, 18vw, 4.2rem); }
-      section { padding: 42px 0; }
+    @media (max-width: 980px) {
+      .hero, .authority-grid, .contact { grid-template-columns: 1fr; }
+      .portrait-panel { min-height: 62dvh; }
+      .hero-meta, .signal-grid { grid-template-columns: 1fr; }
+      h1 { max-width: 7.8ch; }
+      .quote-block { position: static; }
+    }
+
+    @media (max-width: 720px) {
+      .page { width: min(100% - 24px, 1440px); }
+      .nav { align-items: flex-start; flex-direction: column; justify-content: center; padding: 18px 0; }
+      .nav-links { justify-content: flex-start; gap: 12px; font-size: 0.68rem; }
+      .hero { padding-top: 34px; }
+      .portrait-panel { min-height: 56dvh; }
+      .portrait-panel img { object-position: 58% 38%; }
+      .capability, .role { grid-template-columns: 1fr; }
+      .button { width: 100%; }
+      footer { flex-direction: column; }
     }
   </style>
 </head>
 <body>
   <header class="page">
-    <nav aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Jeff Prestes home">
-        <span class="brand-mark">JP</span>
-        <span>Jeff Prestes</span>
-      </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top">Jeff Prestes</a>
       <div class="nav-links">
-        <a href="#expertise">Expertise</a>
+        <a href="#authority">Authority</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
+        <a href="#signals">Signals</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -364,138 +481,113 @@
 
   <main id="top" class="page">
     <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <span class="eyebrow">São Paulo · Payments · Banking · Web3</span>
-        <h1 id="hero-title">Jeff Prestes 雷悟</h1>
-        <p class="subtitle">Payments and digital-assets strategist. Technology advisor. Engagement leader.</p>
-        <p class="summary">Senior professional with 25+ years spanning strategy, advisory and hands-on delivery across fintech, banking and Web3 — including PayPal, EY, Santander Group, Mercado Bitcoin and executive education in AI agents.</p>
-        <div class="actions" aria-label="Contact links">
-          <a class="button primary" href="mailto:jeffprestes@gmail.com">Email Jeff</a>
-          <a class="button secondary" href="https://linkedin.com/in/jeffprestes" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="button secondary" href="https://github.com/jeffprestes" target="_blank" rel="noreferrer">GitHub</a>
+      <div class="hero-copy">
+        <div>
+          <p class="kicker">Future technology advisor</p>
+          <h1 id="hero-title">Jeff Prestes 雷悟</h1>
+        </div>
+        <div>
+          <p class="hero-statement">I help leaders understand what comes next in <span>payments, digital assets and AI agents.</span></p>
+          <p class="hero-summary">Twenty-five years connecting strategy, engineering and executive decisions across PayPal, EY, Santander Group, Mercado Bitcoin and founder-led ventures.</p>
+          <div class="hero-actions" aria-label="Contact links">
+            <a class="button primary" href="mailto:jeffprestes@gmail.com">Email Jeff</a>
+            <a class="button secondary" href="https://linkedin.com/in/jeffprestes" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
         </div>
       </div>
-      <aside class="hero-card" aria-label="Profile photo and quick fact">
-        <img class="portrait" src="jeff-prestes-profile-photo.jpg" alt="Portrait of Jeff Prestes">
-        <div class="fact-card">
-          <strong>25+ years</strong>
-          <span>Payments, banking, digital assets, advisory, engineering leadership and developer education.</span>
-        </div>
+      <aside class="portrait-panel" aria-label="Portrait of Jeff Prestes">
+        <img src="jeff-prestes-authority-portrait.jpg" alt="Black and white professional portrait of Jeff Prestes">
       </aside>
     </section>
 
-    <section id="expertise" aria-labelledby="expertise-title">
-      <div class="section-heading">
-        <h2 id="expertise-title">Advisory profile</h2>
-        <p>Jeff connects boardroom strategy with implementation depth: framing ambiguous business problems, building fact bases and translating complex technologies into clear C-level recommendations.</p>
-      </div>
-      <div class="grid competencies">
-        <div class="competency"><strong>Payments & Banking</strong><span>PayPal/Braintree integration, issuing, acquiring, digital assets, tokenization, RWA, CBDC and retail banking innovation.</span></div>
-        <div class="competency"><strong>Consulting</strong><span>Engagement leadership, assessments, opportunity sizing, PoC design and executive storytelling.</span></div>
-        <div class="competency"><strong>Leadership</strong><span>Hiring, mentoring, Agile/Kanban delivery, university teaching, executive education and developer community building.</span></div>
-        <div class="competency"><strong>Data & Analytics</strong><span>SQL, PostgreSQL, Oracle, MongoDB, AWS data pipelines and quantitative analysis for strategy recommendations.</span></div>
-        <div class="competency"><strong>Technology Depth</strong><span>Solidity, Golang, Rust, Node.js, Ethereum/EVM, Hyperledger Besu, zero-knowledge proofs and AI agents.</span></div>
+    <div class="hero-meta" aria-label="Professional snapshot">
+      <div><strong>25+</strong><span>Years building and advising technology businesses</span></div>
+      <div><strong>3</strong><span>Languages for international executive work</span></div>
+      <div><strong>180+</strong><span>Public repositories and open-source contributions</span></div>
+    </div>
+
+    <section id="authority" aria-labelledby="authority-title">
+      <div class="authority-grid">
+        <div>
+          <h2 id="authority-title">Strategy with technical depth.</h2>
+          <p class="section-intro">Jeff operates where future-facing technology becomes a boardroom decision: payment rails, tokenization, digital assets, bank innovation, privacy protocols and AI-enabled organizations.</p>
+          <div class="capability-list" aria-label="Core advisory capabilities">
+            <article class="capability">
+              <h3>Payments and banking</h3>
+              <p>Platform integrations, checkout economics, merchant needs, issuing and acquiring ecosystems, Braintree and PayPal technical sales experience.</p>
+            </article>
+            <article class="capability">
+              <h3>Digital assets</h3>
+              <p>Tokenization, RWA, CBDC, Drex, EVM architecture, Hyperledger Besu, smart-contract audits and enterprise blockchain assessment.</p>
+            </article>
+            <article class="capability">
+              <h3>AI agents</h3>
+              <p>Executive education and applied agent design through BottegaAI, turning leadership problems into working AI systems.</p>
+            </article>
+          </div>
+        </div>
+        <aside class="quote-block">
+          <p>Authority is not volume. It is the ability to make a complex future legible before everyone else sees it.</p>
+        </aside>
       </div>
     </section>
 
     <section id="experience" aria-labelledby="experience-title">
-      <div class="section-heading">
-        <h2 id="experience-title">Professional experience</h2>
-        <p>A career across startups, banks, Big Four consulting, global payments platforms, open source and education.</p>
-      </div>
-      <div class="timeline">
+      <h2 id="experience-title">Built across eras.</h2>
+      <p class="section-intro">From enterprise Java and global payments to Web3 infrastructure and AI agents, Jeff has repeatedly worked at the edge where technology changes the operating model.</p>
+      <div class="experience-list">
         <article class="role">
-          <div><time>Mar 2026 – Present</time><div class="company">Founder · BottegaAI</div></div>
-          <div><h3>Executive education for AI agents</h3><ul><li>Founded an executive-education venture teaching senior leaders to design and build their own AI agents.</li><li>Structures each cohort as a consulting engagement: diagnose the business problem, design the agent and ship a working solution.</li></ul></div>
+          <time>2026 to present</time>
+          <div>
+            <h3>Founder, BottegaAI</h3>
+            <p>Executive education for senior leaders designing and building their own AI agents. Each cohort works like a focused advisory engagement: diagnose, design, build and ship.</p>
+          </div>
         </article>
         <article class="role">
-          <div><time>Feb 2025 – Feb 2026</time><div class="company">Blockchain Specialist · F1RST Digital Services, Santander Group</div></div>
-          <div><h3>Strategic digital-asset advisory</h3><ul><li>Delivered technical and business assessments for tokenization, CBDC/Drex and RWA initiatives.</li><li>Built and audited smart contracts supporting enterprise pilots on Hyperledger Besu and EVM networks.</li></ul></div>
+          <time>2025 to 2026</time>
+          <div>
+            <h3>Blockchain Specialist, Santander Group</h3>
+            <p>Technical and business assessments for tokenization, CBDC, Drex and RWA initiatives, bridging engineering constraints and executive decision-making.</p>
+          </div>
         </article>
         <article class="role">
-          <div><time>Oct 2023 – Dec 2024</time><div class="company">Blockchain Specialist Consultant · EY</div></div>
-          <div><h3>Big Four consulting and enterprise blockchain</h3><ul><li>Advised enterprise clients on digital-asset strategy and architecture.</li><li>Designed and delivered training programs on smart contracts and permissioned blockchain networks.</li></ul></div>
+          <time>2023 to 2024</time>
+          <div>
+            <h3>Blockchain Specialist Consultant, EY</h3>
+            <p>Enterprise digital-asset strategy and architecture inside a Big Four consulting environment, from scope and assessment to recommendations for client leadership.</p>
+          </div>
         </article>
         <article class="role">
-          <div><time>Jan 2023 – Sep 2023</time><div class="company">Blockchain Architect · Panther Protocol</div></div>
-          <div><h3>Privacy architecture</h3><ul><li>Architected and prototyped cross-chain privacy solutions using Golang, Solidity and ZK-SNARKs.</li></ul></div>
-        </article>
-        <article class="role">
-          <div><time>Nov 2021 – Sep 2022</time><div class="company">Chief Blockchain Officer · Solid World DAO</div></div>
-          <div><h3>Technology strategy and engineering leadership</h3><ul><li>Owned tokenomics technology strategy and designed smart contracts, APIs and front-end architecture.</li><li>Hired, mentored and led the engineering team using Agile/Kanban delivery.</li></ul></div>
-        </article>
-        <article class="role">
-          <div><time>Aug 2018 – Jan 2022</time><div class="company">Professor · PUC-SP</div></div>
-          <div><h3>Blockchain education for senior audiences</h3><ul><li>Created and taught the Blockchain & Smart Contracts Programming course for legal professionals.</li></ul></div>
-        </article>
-        <article class="role">
-          <div><time>Sep 2019 – Jun 2021</time><div class="company">Blockchain Architect · Mercado Bitcoin / MB Digital Assets</div></div>
-          <div><h3>Digital-asset business lines</h3><ul><li>Designed new digital-asset business lines for Latin America’s largest crypto exchange.</li><li>Led Hermez zk-rollup node launch and performance hardening work in production.</li></ul></div>
-        </article>
-        <article class="role">
-          <div><time>May 2012 – Apr 2016</time><div class="company">Developer Advocate / Technical Sales Engineer · PayPal</div></div>
-          <div><h3>Payments integration and developer ecosystems</h3><ul><li>Supported integration of strategic merchants into PayPal and Braintree.</li><li>Introduced products to developer ecosystems across the Americas through talks, papers and live demos.</li></ul></div>
+          <time>2012 to 2016</time>
+          <div>
+            <h3>Developer Advocate and Technical Sales Engineer, PayPal</h3>
+            <p>Strategic merchant integrations, custom proof-of-concepts and developer ecosystem work across the Americas, with four years immersed in payment-platform realities.</p>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="projects" aria-labelledby="projects-title">
-      <div class="section-heading">
-        <h2 id="projects-title">Selected contributions</h2>
-        <p>Technical depth combined with communication, community and applied delivery.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <h3>International speaker</h3>
-          <p>Presented at ETHDenver, Ethereum Rio and Brazilian fintech/developer events, communicating complex topics to large and senior audiences.</p>
-        </article>
-        <article class="card">
-          <h3>Open-source builder</h3>
-          <p>Maintains 180+ public repositories on GitHub across Rust, Solidity, Go and related ecosystems.</p>
-        </article>
-        <article class="card">
-          <h3>Community leadership</h3>
-          <p>Led the NetBeans IDE Portuguese localization effort from 2007 to 2010 and built developer communities around payments and Web3.</p>
-        </article>
+    <section id="signals" aria-labelledby="signals-title">
+      <h2 id="signals-title">Credibility compounds.</h2>
+      <p class="section-intro">A professional profile built through delivery, public contribution, technical communication and advisory work with senior audiences.</p>
+      <div class="signal-grid">
+        <article class="signal"><strong>PayPal</strong><span>Payments platform and merchant integration experience</span></article>
+        <article class="signal"><strong>EY</strong><span>Big Four consulting discipline for enterprise clients</span></article>
+        <article class="signal"><strong>PUC-SP</strong><span>Teaching complex technology to senior professional audiences</span></article>
       </div>
     </section>
 
     <section aria-labelledby="education-title">
-      <div class="section-heading">
-        <h2 id="education-title">Education, languages & community</h2>
-        <p>Business, technology and communication foundation for advisory and delivery in international contexts.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <h3>Education</h3>
-          <ul>
-            <li>Business Administration — Uniban</li>
-            <li>Technical Degree in Data Processing / IT — Colégio São Luís</li>
-            <li>edX Verified Certificate — Hyperledger Besu: Creating a Private Blockchain Network</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Languages</h3>
-          <ul>
-            <li>Portuguese — native</li>
-            <li>English — full professional proficiency</li>
-            <li>Spanish — full professional proficiency</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Volunteering</h3>
-          <p>Library receptionist at Arsenal da Esperança, a shelter for homeless men in São Paulo.</p>
-        </article>
-      </div>
+      <h2 id="education-title">Builder, teacher, advisor.</h2>
+      <p class="section-intro">Business Administration, technical education in data processing, Hyperledger Besu certification, native Portuguese, professional English and Spanish, international speaking and long-term open-source participation.</p>
     </section>
 
     <section id="contact" aria-labelledby="contact-title">
-      <div class="highlight">
+      <div class="contact">
         <div>
-          <h2 id="contact-title">Let’s talk about payments, digital assets or AI agents.</h2>
-          <p>Available for strategic advisory, executive education, technical assessments and hands-on delivery conversations.</p>
+          <h2 id="contact-title">Talk about the future before it becomes obvious.</h2>
         </div>
-        <div class="contact-list">
+        <div class="contact-links">
           <a href="mailto:jeffprestes@gmail.com">jeffprestes@gmail.com</a>
           <a href="https://linkedin.com/in/jeffprestes" target="_blank" rel="noreferrer">linkedin.com/in/jeffprestes</a>
           <a href="https://github.com/jeffprestes" target="_blank" rel="noreferrer">github.com/jeffprestes</a>
@@ -506,7 +598,8 @@
   </main>
 
   <footer class="page">
-    <span>© Jeff Prestes. São Paulo, Brazil.</span>
+    <span>Jeff Prestes</span>
+    <span>São Paulo, Brazil</span>
   </footer>
 </body>
 </html>
