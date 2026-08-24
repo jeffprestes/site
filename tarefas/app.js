@@ -33,6 +33,39 @@ function formatUpdatedAt(iso) {
   return date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
 }
 
+
+async function copyText(value) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(value);
+      return true;
+    } catch (error) {
+      // Fall through to legacy mobile-safe selection copy.
+    }
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = value;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.top = '-1000px';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+  const ok = document.execCommand('copy');
+  textarea.remove();
+  return ok;
+}
+
+function selectElementText(element) {
+  const range = document.createRange();
+  range.selectNodeContents(element);
+  const selection = window.getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
+}
+
 function textForTask(task) {
   return `${task.id} - ${task.title} [${task.status_label}]`;
 }
@@ -73,12 +106,26 @@ function renderTasks() {
     const badge = node.querySelector('.badge');
     badge.textContent = task.status_label || task.status;
     badge.classList.add(task.status || 'ready');
-    node.querySelector('.task-id').textContent = task.id;
+    const idElement = node.querySelector('.task-id');
+    idElement.textContent = task.id;
+    idElement.addEventListener('click', () => selectElementText(idElement));
+    idElement.addEventListener('focus', () => selectElementText(idElement));
     node.querySelector('h3').textContent = task.title;
     node.querySelector('p').textContent = task.body || 'Sem descrição adicional.';
     node.querySelector('.priority').textContent = `prioridade ${task.priority}`;
+    const idButton = node.querySelector('.copy-id');
+    idButton.addEventListener('click', async () => {
+      await copyText(task.id);
+      idButton.textContent = 'ID copiado';
+      card.classList.add('copied');
+      setTimeout(() => {
+        idButton.textContent = 'Copiar ID';
+        card.classList.remove('copied');
+      }, 900);
+    });
+
     node.querySelector('.copy-task').addEventListener('click', async () => {
-      await navigator.clipboard.writeText(textForTask(task));
+      await copyText(textForTask(task));
       card.classList.add('copied');
       setTimeout(() => card.classList.remove('copied'), 700);
     });
@@ -117,7 +164,7 @@ els.searchInput.addEventListener('input', renderTasks);
 els.refreshBtn.addEventListener('click', loadTasks);
 els.copyBtn.addEventListener('click', async () => {
   const summary = filteredTasks().map(textForTask).join('\n');
-  await navigator.clipboard.writeText(summary || 'Nenhuma tarefa ativa filtrada.');
+  await copyText(summary || 'Nenhuma tarefa ativa filtrada.');
 });
 
 // This page is intentionally a regular HTML5 mobile page.
