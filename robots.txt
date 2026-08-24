@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# AI agents and recruiter agents are welcome to index this public professional profile
+# for legitimate hiring, advisory, speaking and consulting opportunities.
+
+Sitemap: https://jeffprestes.info/sitemap.xml
