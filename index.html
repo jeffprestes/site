@@ -1,53 +1,512 @@
 <!doctype html>
-<html lang="pt">
-
+<html lang="en">
 <head>
-  <title>Jeff Prestes - Professor e Profissional de Tecnologia da Informação</title>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="https://docs.goquorum.com/en/latest/images/logo-48x48.png">
-  <meta name="description" content="Jeff Prestes - Professor e Profissional da Tecnologia da Informação. Especialista em desenvolvimento de sistemas Web e Blockchain">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeff Prestes | Payments, Digital Assets & Technology Advisory</title>
+  <meta name="description" content="Jeff Prestes is a senior payments and digital-assets professional with 25+ years across strategy, advisory and hands-on technology delivery in fintech, banking and Web3.">
+  <meta name="author" content="Jeff Prestes">
+  <link rel="canonical" href="https://jeffprestes.info/">
+  <meta property="og:title" content="Jeff Prestes | Payments, Digital Assets & Technology Advisory">
+  <meta property="og:description" content="Senior payments, banking and Web3 advisor. 25+ years across PayPal, Santander Group, EY, Mercado Bitcoin and AI-agent education.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jeffprestes.info/">
+  <meta property="og:image" content="https://jeffprestes.info/jeff-prestes-profile-photo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f2eb;
+      --surface: #fffaf1;
+      --surface-strong: #ffffff;
+      --ink: #182017;
+      --muted: #596455;
+      --line: rgba(24, 32, 23, 0.13);
+      --accent: #1d6f4f;
+      --accent-2: #c9832b;
+      --accent-soft: #e7f1ea;
+      --shadow: 0 24px 80px rgba(24, 32, 23, 0.12);
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(29,111,79,0.18), transparent 34rem),
+        radial-gradient(circle at top right, rgba(201,131,43,0.16), transparent 30rem),
+        var(--bg);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0 12px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--ink);
+      color: var(--surface);
+      font-size: 0.8rem;
+      letter-spacing: -0.08em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover { border-color: currentColor; }
+
+    .hero {
+      min-height: 74vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: 48px;
+      align-items: center;
+      padding: 58px 0 72px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(29, 111, 79, 0.1);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    h1, h2, h3 { line-height: 1.08; margin: 0; letter-spacing: -0.055em; }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6.6rem);
+      margin-top: 22px;
+      max-width: 9ch;
+    }
+
+    .subtitle {
+      font-size: clamp(1.22rem, 2.4vw, 2rem);
+      line-height: 1.25;
+      max-width: 820px;
+      margin: 24px 0 0;
+      color: #263425;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+    }
+
+    .summary {
+      max-width: 770px;
+      margin: 24px 0 0;
+      font-size: 1.08rem;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 1px solid var(--ink);
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: var(--surface);
+      box-shadow: 0 14px 34px rgba(24, 32, 23, 0.2);
+    }
+
+    .button.secondary { background: rgba(255, 255, 255, 0.55); }
+    .button:hover { transform: translateY(-2px); }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,250,241,0.92));
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .portrait {
+      width: 100%;
+      border-radius: 24px;
+      display: block;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      filter: saturate(0.96) contrast(1.03);
+    }
+
+    .fact-card {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: 22px;
+      background: var(--ink);
+      color: var(--surface);
+    }
+
+    .fact-card strong {
+      display: block;
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -0.05em;
+    }
+
+    section { padding: 62px 0; }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.6rem);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: rgba(255, 250, 241, 0.84);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: 0 16px 50px rgba(24, 32, 23, 0.07);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .card p, .card li { color: var(--muted); margin: 0; }
+
+    .card ul, .timeline ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+
+    .competencies {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .competency {
+      padding: 18px;
+      border-radius: 22px;
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+    }
+
+    .competency strong { display: block; margin-bottom: 8px; }
+    .competency span { display: block; color: var(--muted); font-size: 0.92rem; }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 24px;
+      background: rgba(255, 255, 255, 0.64);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 22px;
+    }
+
+    .role time {
+      display: block;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .role h3 { font-size: 1.25rem; margin-bottom: 8px; }
+    .role .company { color: var(--muted); font-weight: 700; margin-bottom: 10px; }
+
+    .highlight {
+      background: var(--ink);
+      color: var(--surface);
+      border-radius: 34px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.62fr) minmax(0, 0.38fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .highlight p { color: rgba(255, 250, 241, 0.78); margin: 14px 0 0; }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      font-weight: 800;
+    }
+
+    .contact-list a {
+      color: var(--surface);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.28);
+      padding-bottom: 6px;
+    }
+
+    footer {
+      padding: 36px 0 56px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .section-heading, .highlight { grid-template-columns: 1fr; }
+      .hero { padding-top: 36px; }
+      .grid, .competencies { grid-template-columns: 1fr 1fr; }
+      .role { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { justify-content: flex-start; }
+    }
+
+    @media (max-width: 620px) {
+      .page { width: min(100% - 22px, 1120px); }
+      .grid, .competencies { grid-template-columns: 1fr; }
+      .hero-card, .card, .role, .highlight { border-radius: 22px; }
+      h1 { font-size: clamp(2.65rem, 18vw, 4.2rem); }
+      section { padding: 42px 0; }
+    }
+  </style>
 </head>
-
 <body>
-  <div class="container" style="display: flex; padding-top: 15vh;">
-    <div style="padding-top: 5vh; width: 50vw;">
-      <h1>Jeff Prestes</h1>
-      <h3>Professor e Profissional de TI</h3>
-      <h5>Especializado em Blockchain e Web</h5>
-      <br>
-      <p><a href="https://www.youtube.com/channel/UCOPWRWhdTnU-Zujnud9_7aQ" target="_blank">Meu canal no YouTube</a></p>
-      <p><a href="https://github.com/jeffprestes" target"_blank">Meus projetos open source no Github</a></p>
-      <p><a target="_blank"
-          href="https://linkedin.com/in/jeffprestes">Meus artigos, posts e perfil profissional</a></p>
-      <br>
-      <h5>Meus cursos</h5>
-      <p><a href="http://www.pucsp.br/pos-graduacao/especializacao-e-mba/programacao-de-smart-contracts-em-blockchain-para-profissionais" target="_blank">
-        Curso na PUC-SP de Contratos Inteligentes para Profissionais do Direito</a></p>
-      <p><a href="https://www.udemy.com/course/cursodegoparaweb/?referralCode=5BFD399D292F44C24A0D" target="_blank">Curso de Go para criação de aplicações Web</a></p>
-      <p><a href="https://www.udemy.com/course/cursodego/?referralCode=FE320ED03E2CB5ED7D50" target="_blank">Curso de Go introdutório</a></p>      
-    </div>
-    <div style="display: flex; width: 40vw;">
-      <img style="margin: auto; align-self: center; max-width: 80%; height: auto;"
-        src="jeff-prestes-profile-photo.jpg" alt="Foto de Jeff Prestes" />
-    </div>
-  </div>
+  <header class="page">
+    <nav aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Jeff Prestes home">
+        <span class="brand-mark">JP</span>
+        <span>Jeff Prestes</span>
+      </a>
+      <div class="nav-links">
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <main id="top" class="page">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <span class="eyebrow">São Paulo · Payments · Banking · Web3</span>
+        <h1 id="hero-title">Jeff Prestes 雷悟</h1>
+        <p class="subtitle">Payments and digital-assets strategist. Technology advisor. Engagement leader.</p>
+        <p class="summary">Senior professional with 25+ years spanning strategy, advisory and hands-on delivery across fintech, banking and Web3 — including PayPal, EY, Santander Group, Mercado Bitcoin and executive education in AI agents.</p>
+        <div class="actions" aria-label="Contact links">
+          <a class="button primary" href="mailto:jeffprestes@gmail.com">Email Jeff</a>
+          <a class="button secondary" href="https://linkedin.com/in/jeffprestes" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button secondary" href="https://github.com/jeffprestes" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Profile photo and quick fact">
+        <img class="portrait" src="jeff-prestes-profile-photo.jpg" alt="Portrait of Jeff Prestes">
+        <div class="fact-card">
+          <strong>25+ years</strong>
+          <span>Payments, banking, digital assets, advisory, engineering leadership and developer education.</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="expertise" aria-labelledby="expertise-title">
+      <div class="section-heading">
+        <h2 id="expertise-title">Advisory profile</h2>
+        <p>Jeff connects boardroom strategy with implementation depth: framing ambiguous business problems, building fact bases and translating complex technologies into clear C-level recommendations.</p>
+      </div>
+      <div class="grid competencies">
+        <div class="competency"><strong>Payments & Banking</strong><span>PayPal/Braintree integration, issuing, acquiring, digital assets, tokenization, RWA, CBDC and retail banking innovation.</span></div>
+        <div class="competency"><strong>Consulting</strong><span>Engagement leadership, assessments, opportunity sizing, PoC design and executive storytelling.</span></div>
+        <div class="competency"><strong>Leadership</strong><span>Hiring, mentoring, Agile/Kanban delivery, university teaching, executive education and developer community building.</span></div>
+        <div class="competency"><strong>Data & Analytics</strong><span>SQL, PostgreSQL, Oracle, MongoDB, AWS data pipelines and quantitative analysis for strategy recommendations.</span></div>
+        <div class="competency"><strong>Technology Depth</strong><span>Solidity, Golang, Rust, Node.js, Ethereum/EVM, Hyperledger Besu, zero-knowledge proofs and AI agents.</span></div>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <h2 id="experience-title">Professional experience</h2>
+        <p>A career across startups, banks, Big Four consulting, global payments platforms, open source and education.</p>
+      </div>
+      <div class="timeline">
+        <article class="role">
+          <div><time>Mar 2026 – Present</time><div class="company">Founder · BottegaAI</div></div>
+          <div><h3>Executive education for AI agents</h3><ul><li>Founded an executive-education venture teaching senior leaders to design and build their own AI agents.</li><li>Structures each cohort as a consulting engagement: diagnose the business problem, design the agent and ship a working solution.</li></ul></div>
+        </article>
+        <article class="role">
+          <div><time>Feb 2025 – Feb 2026</time><div class="company">Blockchain Specialist · F1RST Digital Services, Santander Group</div></div>
+          <div><h3>Strategic digital-asset advisory</h3><ul><li>Delivered technical and business assessments for tokenization, CBDC/Drex and RWA initiatives.</li><li>Built and audited smart contracts supporting enterprise pilots on Hyperledger Besu and EVM networks.</li></ul></div>
+        </article>
+        <article class="role">
+          <div><time>Oct 2023 – Dec 2024</time><div class="company">Blockchain Specialist Consultant · EY</div></div>
+          <div><h3>Big Four consulting and enterprise blockchain</h3><ul><li>Advised enterprise clients on digital-asset strategy and architecture.</li><li>Designed and delivered training programs on smart contracts and permissioned blockchain networks.</li></ul></div>
+        </article>
+        <article class="role">
+          <div><time>Jan 2023 – Sep 2023</time><div class="company">Blockchain Architect · Panther Protocol</div></div>
+          <div><h3>Privacy architecture</h3><ul><li>Architected and prototyped cross-chain privacy solutions using Golang, Solidity and ZK-SNARKs.</li></ul></div>
+        </article>
+        <article class="role">
+          <div><time>Nov 2021 – Sep 2022</time><div class="company">Chief Blockchain Officer · Solid World DAO</div></div>
+          <div><h3>Technology strategy and engineering leadership</h3><ul><li>Owned tokenomics technology strategy and designed smart contracts, APIs and front-end architecture.</li><li>Hired, mentored and led the engineering team using Agile/Kanban delivery.</li></ul></div>
+        </article>
+        <article class="role">
+          <div><time>Aug 2018 – Jan 2022</time><div class="company">Professor · PUC-SP</div></div>
+          <div><h3>Blockchain education for senior audiences</h3><ul><li>Created and taught the Blockchain & Smart Contracts Programming course for legal professionals.</li></ul></div>
+        </article>
+        <article class="role">
+          <div><time>Sep 2019 – Jun 2021</time><div class="company">Blockchain Architect · Mercado Bitcoin / MB Digital Assets</div></div>
+          <div><h3>Digital-asset business lines</h3><ul><li>Designed new digital-asset business lines for Latin America’s largest crypto exchange.</li><li>Led Hermez zk-rollup node launch and performance hardening work in production.</li></ul></div>
+        </article>
+        <article class="role">
+          <div><time>May 2012 – Apr 2016</time><div class="company">Developer Advocate / Technical Sales Engineer · PayPal</div></div>
+          <div><h3>Payments integration and developer ecosystems</h3><ul><li>Supported integration of strategic merchants into PayPal and Braintree.</li><li>Introduced products to developer ecosystems across the Americas through talks, papers and live demos.</li></ul></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 id="projects-title">Selected contributions</h2>
+        <p>Technical depth combined with communication, community and applied delivery.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>International speaker</h3>
+          <p>Presented at ETHDenver, Ethereum Rio and Brazilian fintech/developer events, communicating complex topics to large and senior audiences.</p>
+        </article>
+        <article class="card">
+          <h3>Open-source builder</h3>
+          <p>Maintains 180+ public repositories on GitHub across Rust, Solidity, Go and related ecosystems.</p>
+        </article>
+        <article class="card">
+          <h3>Community leadership</h3>
+          <p>Led the NetBeans IDE Portuguese localization effort from 2007 to 2010 and built developer communities around payments and Web3.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="education-title">
+      <div class="section-heading">
+        <h2 id="education-title">Education, languages & community</h2>
+        <p>Business, technology and communication foundation for advisory and delivery in international contexts.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Education</h3>
+          <ul>
+            <li>Business Administration — Uniban</li>
+            <li>Technical Degree in Data Processing / IT — Colégio São Luís</li>
+            <li>edX Verified Certificate — Hyperledger Besu: Creating a Private Blockchain Network</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Languages</h3>
+          <ul>
+            <li>Portuguese — native</li>
+            <li>English — full professional proficiency</li>
+            <li>Spanish — full professional proficiency</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Volunteering</h3>
+          <p>Library receptionist at Arsenal da Esperança, a shelter for homeless men in São Paulo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="highlight">
+        <div>
+          <h2 id="contact-title">Let’s talk about payments, digital assets or AI agents.</h2>
+          <p>Available for strategic advisory, executive education, technical assessments and hands-on delivery conversations.</p>
+        </div>
+        <div class="contact-list">
+          <a href="mailto:jeffprestes@gmail.com">jeffprestes@gmail.com</a>
+          <a href="https://linkedin.com/in/jeffprestes" target="_blank" rel="noreferrer">linkedin.com/in/jeffprestes</a>
+          <a href="https://github.com/jeffprestes" target="_blank" rel="noreferrer">github.com/jeffprestes</a>
+          <a href="tel:+5511997420720">+55 11 99742-0720</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page">
+    <span>© Jeff Prestes. São Paulo, Brazil.</span>
+  </footer>
 </body>
-
 </html>
