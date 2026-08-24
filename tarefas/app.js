@@ -12,7 +12,6 @@ const els = {
   statusFilters: document.getElementById('statusFilters'),
   refreshBtn: document.getElementById('refreshBtn'),
   copyBtn: document.getElementById('copyBtn'),
-  installBtn: document.getElementById('installBtn'),
   template: document.getElementById('taskTemplate'),
 };
 
@@ -121,22 +120,14 @@ els.copyBtn.addEventListener('click', async () => {
   await navigator.clipboard.writeText(summary || 'Nenhuma tarefa ativa filtrada.');
 });
 
-window.addEventListener('beforeinstallprompt', event => {
-  event.preventDefault();
-  deferredInstallPrompt = event;
-  els.installBtn.hidden = false;
-});
-
-els.installBtn.addEventListener('click', async () => {
-  if (!deferredInstallPrompt) return;
-  deferredInstallPrompt.prompt();
-  await deferredInstallPrompt.userChoice;
-  deferredInstallPrompt = null;
-  els.installBtn.hidden = true;
-});
-
+// This page is intentionally a regular HTML5 mobile page.
+// If an older PWA service worker was installed before this change, unregister it
+// so Android browsers load the current static HTML directly.
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+  window.addEventListener('load', async () => {
+    const registrations = await navigator.serviceWorker.getRegistrations();
+    await Promise.all(registrations.map(registration => registration.unregister()));
+  });
 }
 
 loadTasks();
