@@ -1,0 +1,20 @@
+{
+  "name": "Tarefas Jeff | Sancho Kanban",
+  "short_name": "Tarefas Jeff",
+  "description": "PWA mobile para visualizar tarefas ativas do Kanban pessoal do Jeff.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f1e8",
+  "theme_color": "#111111",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"]
+}

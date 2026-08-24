@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tarefas Jeff | Sancho Kanban PWA</title>
+  <meta name="description" content="PWA mobile para visualizar tarefas atuais e ativas do Kanban pessoal do Jeff, operado pelo Sancho.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#111111">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Tarefas Jeff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/icon.svg">
+  <link rel="stylesheet" href="/styles.css?v=1">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <p class="eyebrow">Sancho Kanban</p>
+      <h1>Tarefas ativas</h1>
+      <p class="lead">Lista mobile das tarefas atuais do seu Kanban pessoal. Atualizada pelo Sancho no servidor.</p>
+      <div class="hero-actions">
+        <button id="refreshBtn" class="primary" type="button">Atualizar</button>
+        <button id="installBtn" class="secondary" type="button" hidden>Instalar PWA</button>
+      </div>
+    </header>
+
+    <section class="summary" aria-label="Resumo">
+      <article>
+        <strong id="taskCount">0</strong>
+        <span>ativas</span>
+      </article>
+      <article>
+        <strong id="readyCount">0</strong>
+        <span>prontas</span>
+      </article>
+      <article>
+        <strong id="updatedAt">--</strong>
+        <span>atualizado</span>
+      </article>
+    </section>
+
+    <section class="toolbar" aria-label="Filtros">
+      <label for="searchInput">Buscar tarefa</label>
+      <input id="searchInput" type="search" placeholder="Mercado Livre, SostenesAI, Google Docs..." autocomplete="off">
+      <div id="statusFilters" class="chips" aria-label="Filtrar por status"></div>
+    </section>
+
+    <section class="task-section" aria-labelledby="taskListTitle">
+      <div class="section-title">
+        <h2 id="taskListTitle">Lista ativa</h2>
+        <button id="copyBtn" class="ghost" type="button">Copiar resumo</button>
+      </div>
+      <div id="taskList" class="task-list" aria-live="polite"></div>
+      <p id="emptyState" class="empty" hidden>Nenhuma tarefa ativa encontrada para este filtro.</p>
+    </section>
+  </main>
+
+  <template id="taskTemplate">
+    <article class="task-card">
+      <div class="task-topline">
+        <span class="badge"></span>
+        <span class="task-id"></span>
+      </div>
+      <h3></h3>
+      <p></p>
+      <div class="task-footer">
+        <span class="priority"></span>
+        <button class="copy-task" type="button">Copiar</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="/app.js?v=1" defer></script>
+</body>
+</html>

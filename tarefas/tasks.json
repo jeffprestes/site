@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-08-24T21:04:15.968953+00:00",
+  "tenant": "pessoal",
+  "source": "hermes kanban list --tenant pessoal --json",
+  "active_statuses": [
+    "blocked",
+    "ready",
+    "review",
+    "running",
+    "scheduled",
+    "todo",
+    "triage"
+  ],
+  "count": 17,
+  "tasks": [
+    {
+      "id": "t_200a6fcf",
+      "title": "Buscar compras do Mercado Livre",
+      "body": "Origem: pedido direto do usuário. Capturado em sessão Hermes em múltiplos gateways. Status inicial: pendente.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 140,
+      "assignee": "Sancho",
+      "created_at": 1786630859
+    },
+    {
+      "id": "t_4debe622",
+      "title": "Remarcar a consulta no dermatologista",
+      "body": "Origem: pedido direto do usuário. Capturado em sessão Hermes em múltiplos gateways. Status inicial: pendente.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 120,
+      "assignee": "Sancho",
+      "created_at": 1786622881
+    },
+    {
+      "id": "t_93b07d85",
+      "title": "Comprar tapetes traseiros de borracha para carro",
+      "body": "Origem: lista preservada em sessão Hermes/Telegram. Capturado em 2026-08-12 22:47 -03. Status inicial: pendente. Observação: tarefa pessoal acessível via Kanban em múltiplas sessões e gateways.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 110,
+      "assignee": "Sancho",
+      "created_at": 1786585733
+    },
+    {
+      "id": "t_1d287f19",
+      "title": "Ver com Yuri sobre NPS em sorveteria com IA",
+      "body": "Origem: lista preservada em sessão Hermes/Telegram. Capturado em 2026-08-12 22:47 -03. Status inicial: pendente. Observação: tarefa pessoal acessível via Kanban em múltiplas sessões e gateways.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 100,
+      "assignee": "Sancho",
+      "created_at": 1786585732
+    },
+    {
+      "id": "t_b7f6f01e",
+      "title": "Fazer o Sancho fazer compras automáticas",
+      "body": "Origem: lista preservada em sessão Hermes/Telegram. Capturado em 2026-08-12 22:47 -03. Status inicial: pendente. Observação: tarefa pessoal acessível via Kanban em múltiplas sessões e gateways. Prazo original: amanhã, 2026-08-11.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 70,
+      "assignee": "Sancho",
+      "created_at": 1786585730
+    },
+    {
+      "id": "t_7a6650d7",
+      "title": "Terapia com Paulo",
+      "body": "Origem: lista preservada em sessão Hermes/Telegram. Capturado em 2026-08-12 22:47 -03. Status inicial: pendente. Observação: tarefa pessoal acessível via Kanban em múltiplas sessões e gateways.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 60,
+      "assignee": "Sancho",
+      "created_at": 1786585729
+    },
+    {
+      "id": "t_d9912708",
+      "title": "Pegar encomendas do Mercado Livre",
+      "body": "Origem: lista preservada em sessão Hermes/Telegram. Capturado em 2026-08-12 22:47 -03. Status inicial: pendente. Observação: tarefa pessoal acessível via Kanban em múltiplas sessões e gateways.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 40,
+      "assignee": "Sancho",
+      "created_at": 1786585727
+    },
+    {
+      "id": "t_15a04485",
+      "title": "Jogar água limpa nas plantas e trocar água dos gatos",
+      "body": "Origem: lista preservada em sessão Hermes/Telegram. Capturado em 2026-08-12 22:47 -03. Status inicial: pendente. Observação: tarefa pessoal acessível via Kanban em múltiplas sessões e gateways.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 30,
+      "assignee": "Sancho",
+      "created_at": 1786585726
+    },
+    {
+      "id": "t_0385687a",
+      "title": "Datas e hospedagem hackathon Santa Rita",
+      "body": "Levantar/definir datas e hospedagem para o hackathon em Santa Rita.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 0,
+      "assignee": "Sancho",
+      "created_at": 1787328950
+    },
+    {
+      "id": "t_8b84600a",
+      "title": "Apresentação do curso para religiosos e IA na prática",
+      "body": "Preparar apresentação do curso para religiosos e IA na prática em português e em italiano.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 0,
+      "assignee": "Sancho",
+      "created_at": 1787328951
+    },
+    {
+      "id": "t_0a68dfd1",
+      "title": "Abrir projeto da Mariza",
+      "body": "Abrir/iniciar o projeto da Mariza.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 0,
+      "assignee": "Sancho",
+      "created_at": 1787328952
+    },
+    {
+      "id": "t_ed6770f4",
+      "title": "Abrir projeto do SostenesAI Health",
+      "body": "Abrir/iniciar o projeto do SostenesAI Health.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 0,
+      "assignee": "Sancho",
+      "created_at": 1787328953
+    },
+    {
+      "id": "t_fc43493a",
+      "title": "Escrever artigo sobre Casa-Grande & Senzala e força de trabalho brasileira na era da IA",
+      "body": "Escrever artigo conectando Casa-Grande & Senzala, formação social brasileira e os impactos da IA na força de trabalho brasileira.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 0,
+      "assignee": "Sancho",
+      "created_at": 1787334034
+    },
+    {
+      "id": "t_8e91ce72",
+      "title": "Abrir Google Docs para o Ephy comentar Livestock Tokens e falar da Fazenda Ju",
+      "body": "Abrir/criar Google Docs para o Ephy fazer comentários sobre o projeto livestocktokens/livestocktoken e incluir conversa/contexto sobre a Fazenda Ju para eles.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 0,
+      "assignee": "Sancho",
+      "created_at": 1787483679
+    },
+    {
+      "id": "t_8972e88d",
+      "title": "Conversar com Vanessa Camargo sobre Meetup Gemini, Hermes e Go no GDG",
+      "body": "Contato: Vanessa Camargo. LinkedIn: https://www.linkedin.com/in/vanessaxcamargo. Objetivo: conversar sobre possível Meetup envolvendo Gemini, Hermes e Go no GDG.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 0,
+      "assignee": "Sancho",
+      "created_at": 1787535710
+    },
+    {
+      "id": "t_a3a419be",
+      "title": "Adicionar no site do SostenesAI desenvolvimento de squad agêntica",
+      "body": "Atualizar o site do SostenesAI para incluir oferta/conteúdo sobre desenvolvimento de squad agêntica, destacando proposta de valor, casos de uso e CTA.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 0,
+      "assignee": "Sancho",
+      "created_at": 1787575878
+    },
+    {
+      "id": "t_ecd31f1a",
+      "title": "Exportar do Sancho e adicionar no Sóstenes a skill de tarefas por e-mail",
+      "body": "Exportar do Sancho/Hermes a skill/procedimento de capturar, interpretar e executar tarefas enviadas por e-mail, e adicionar/configurar no Sóstenes. Incluir validação de remetentes, assunto-gatilho, registro da tarefa, execução segura e resposta por e-mail.",
+      "status": "ready",
+      "status_label": "Pronta",
+      "priority": 0,
+      "assignee": "Sancho",
+      "created_at": 1787575942
+    }
+  ]
+}
